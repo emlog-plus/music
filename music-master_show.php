@@ -31,7 +31,7 @@ include View::getView('header');
 </div>
 <div class="js_tab" id="index_tab">
           <table class="table table-striped table-hover ">
-        <thead><tr><th style="width:2px">序号</th><th style="width:20%">歌曲</th><th style="width:20%">歌手</th><th style="width:15%">时长</th><th style="width:5px">试听</th><th style="width:5px">下载</th></tr></thead>
+        <thead><tr><th style="width:18px">序号</th><th style="width:20%">歌曲</th><th style="width:20%">歌手</th><th style="width:15%">时长</th><th style="width:5px">试听</th><th style="width:5px">下载</th></tr></thead>
         <tbody>
    	<?php
    	while($row = $DB -> fetch_array($rs_result))         {$start_from++;?>
