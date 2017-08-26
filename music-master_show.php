@@ -14,6 +14,7 @@ $start_from = ($page-1) * $num_page;
 $sql = " SELECT `id`,`music_id`,`music_title`,`music_author`,`music_time`,`music_pic`,`music_lrc` FROM `".DB_PREFIX."music` ORDER BY `id` ".$music_order." LIMIT ".$start_from.", ".$num_page."";
 $rs_result = $DB -> query($sql); 
 $res = $DB->once_fetch_array("SELECT naviname, hide FROM ".DB_PREFIX."navi WHERE url='".BLOG_URL."?plugin=music-master'");
+$blogname = $options_cache['blogname'];
 $site_title = $res['naviname'].' - '.Option::get('blogname');
 $log_title = $res['naviname'];
 $site_description = $bloginfo = Option::get('bloginfo');
