@@ -7,7 +7,7 @@ $url = $_GET['urls'];
 $sql = " SELECT `music_id` FROM `".DB_PREFIX."music` WHERE `id` = '".$url."' LIMIT 1";
 $rs_result = $db -> query($sql); 
 if($go = $db ->fetch_array($rs_result)){
-		$real_url = BLOG_URL."/content/plugins/music-master/url.php?url=".$go['music_id']."";
+		$real_url = BLOG_URL."content/plugins/music-master/url.php?url=".$go['music_id']."";
 		header('Location: ' . $real_url);
 	}else{
 		header('HTTP/1.0 404 Not Found');
